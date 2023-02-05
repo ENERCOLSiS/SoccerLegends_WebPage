@@ -1,0 +1,193 @@
+<!-- Orlando Morales - 8852536 -->
+<!-- PROG 8045 Web Foundations Project 
+Date Created: 23/11/2022 
+Last Update: 27/11/2022 -->
+
+<!-- 1. page built as per the design provided -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Unique title defined in the head tag -->
+    <title>
+        A2 Orlando Morales 8852536 29/11/2022
+    </title>
+    <!-- Loading my webPage icon -->
+    <link rel="icon" href="images/logos/favicon1.png" type="image/x-icon">
+
+    <!-- Calling Normalize CSS-->
+    <link rel="stylesheet" href="css/normalize.css">
+    <!-- Importing my CSS file -->
+    <link rel="stylesheet" href="css/myStyle.css">
+
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Zen+Dots&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Luxurious+Roman&display=swap" rel="stylesheet">
+</head>
+<!-- 2. body is sit in a container in css -->
+<body>
+    <!-- 3. Header Section -logo from css and tagline an h2-->
+    <!-- 4. header in different color from the rest of the site -->
+    <header id="mainheader">
+        <!-- this is my icon also work as a link to the home page-->
+        <div class="logo">
+            <a href="index.html"><img src="/images/logos/logo.png"" alt="Cracks Logo"></a>
+        </div>
+        <!-- This is my Tagline -->
+        <h2> Cracks - Orlando Morales - orma@engineer.com</h2>
+    </header>
+
+    <!-- 5. Two tier Navigation bar -->
+    <nav>
+        <!-- my first level nav menu -->
+        <ul>
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+            <li>
+                <a href="innerpage.html">Leyends</a>
+                <!-- my Second level UL or the sub menu for -->
+                <ul>
+                    <li><a href="innerpage.html#hero">Story</li></a>
+                    <li><a href="innerpage.html#firstSection">Video</li></a>
+                    <li><a href="innerpage.html#anotherSecondSection">Top 10</li></a>
+                </ul> 
+            </li>
+            <li>
+                <a href="innerpage.html#firstSection">Ultimate Video</a>
+            </li>
+            <li>
+                <a href="innerpage.html#thirdSection">Join Us</a>
+            </li>
+        </ul>
+    </nav>
+    
+    <main>
+    <!-- 6. Hero Image -->
+        <section class="heroSection">
+            <img src="images/heroimage1.jpg" alt="world cup ultimate team">
+            <!-- Image heroimage1.jpg from Wallpaper.Dog (2022, November 30). world cup Wallpapers [Wallpapaer]. From Wallpaper.Dog. https://wallpaper.dog/large/20574691.jpg -->
+        </section>
+
+    <!-- 7. Section with a heading and a paragraph full width -->
+        <section class="heroHeading">
+            <header>
+                <h2>Meet The Greates of All Times</h2>
+                <p>
+                    The entire globe has celebrated <em>21 world cups</em>. Amazing players from all over the globe compete for their nation's glory. Here you will find who have been and are the greatest players of all time. ¡Enjoy exploring!
+                </p>
+            </header>
+        </section>
+    
+    <!-- 8. Two sections with text on one side and an image on the other. -images with shapes using clip paths on css -->
+        <section id="firstSection">
+            <div class="textLeft">
+                <h2>Edson Arantes do Nascimento <em>(Pelé)</em></h2> <span>1940 (age 82)</span>
+                <p>Pelé was voted World Player of the Century by the International Federation of Football History & Statistics (IFFHS), and was one of the two joint winners of the FIFA Player of the Century. In Brazil, he is hailed as a national hero for his accomplishments in football and for his outspoken support of policies that improve the social conditions of the poor. His emergence at the 1958 World Cup where he became the first black global sporting star was a source of inspiration</p>
+                <!-- Extrated from wikipedia. (2022, November 28). Edson Arantes [biography]. From https://en.wikipedia.org/wiki/Pel%C3%A9 -->
+            </div>
+            <div class="imgRight">
+                <img src="images/legends/pele.png" alt="Picture of Pelé cuddle a soccer ball">
+            </div>
+        </section>
+
+        <section id="secondSection">
+            <div class="imgLeft">
+                <img src="images/legends/lev.jpg" alt="Picture of Lev Yashin holding a soccer ball">
+            </div>
+            <div class="textRight">
+                <h2>Lev Yashin</h2> <span>(1929 - 1990)</span>    
+                <p> Born in Moscow.He dressed head to toe in apparent black (in truth very dark blue), thus earning his nickname the "Black Spider", which enhanced his popularity. In 1963, Yashin received the Golden Ball, the only goalkeeper ever to receive the award. He was additionally named posthumously to the golden ball Dream Team in 2020, a greatest all-time XI, and was voted the best goalkeeper of the 20th century by the IFFHS.</p>
+                <!-- Extrated from wikipedia. (2022, November 28). Lev Yashin [biography]. From https://en.wikipedia.org/wiki/Lev_Yashin -->
+            </div>
+        </section>
+    
+    <!-- 9. Section with 3 cards each with headings -->
+        <section id="thirdSection">
+            <h2>*** TOP PLAYERS ***</h2>
+    <!-- 10. Card with images and buttons linked to the inner page -->
+            <div class="cards">
+                <article class="player1">
+                    <div class="player">
+                        <img src="images/players/ronaldinho.jpg" alt="soccer player: Ronaldinho">
+                        <!-- Image ronaldinho.jpg from Wallpaper.Dog (2022, November 30). Ronaldinho Wallpapers [Wallpapaer]. From Wallpaper.Dog. https://wallpaper.dog/large/5512579.jpg -->
+                        <h3>Ronaldinho Gaúcho</h3>
+                        <ol>
+                            <li>The wizard</li>
+                            <li>Pure samba...¡"Sabor"!</li>
+                            <li>The smile of soccer</li>
+                        </ol>
+                        <!-- anchor tag of card to be designed as a button -->
+                        <a class="button" href="innerpage.html"> Read More </a>
+                    </div>
+                </article>
+                <article class="player2">
+                    <div class="player">
+                        <img src="images/players/messi.jpg" alt="soccer player: Leonel Messi">
+                        <!-- Image messi.jpg from Wallpapercave (2022, November 30). messi Wallpapers [Wallpapaer]. From Wallpapercave. https://wallpaper.dog/large/10717742.jpg -->
+                        <h3>Leonel Messi</h3>
+                        <ul>
+                            <li>G.O.A.T</li>
+                            <li>"La pulga"</li>
+                            <li>Soccer Genius</li>
+                        </ul>
+                        <!-- anchor tag of card to be designed as a button -->
+                        <a class="button" href="innerpage.html"> Read More </a>
+                    </div>
+                </article>
+                <article class="player3">
+                    <div class="player">
+                        <img src="images/players/buffon.jpg" alt="soccer player: Gianluigi Buffon">
+                        <!-- Image buffon.jpg from Wallpapercave (2022, November 30). Gianluigi Buffon Wallpapers [Wallpapaer]. From Wallpapercave. https://wallpapercave.com/w/wp1818348 -->
+                        <h3>Gianluigi Buffon</h3>
+                        <ul>
+                            <li>Superman</li>
+                            <li>IFFHS World's Best Goalkeeperx5</li>
+                            <li>First "golden foot" Goalkeeper</li>
+                        </ul>
+                         <!-- anchor tag of card to be designed as a button -->
+                        <a class="button" href="innerpage.html"> Read More </a>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+    <!-- 11. Footer with two sections 1.Menus 2.Copyright info -->
+    <footer>
+        <!-- 11. 1. menus -->
+        <div class="menus">
+            <div id="menu1">
+                <h3>Menu1</h3>
+                <ul>
+                    <li><a href="">Link</a></li>
+                    <li><a href="">Link</a></li>
+                    <li><a href="">Link</a></li>
+                </ul>
+            </div>
+            <div id="menu2">
+                <h3>Menu2</h3>
+                <ul>
+                    <li><a href="">Link</a></li>
+                    <li><a href="">Link</a></li>
+                    <li><a href="">Link</a></li>
+                </ul>
+            </div>
+            <div id="menu3">
+                <h3>Menu3</h3>
+                <ul>
+                    <li><a href="">Link</a></li>
+                    <li><a href="">Link</a></li>
+                    <li><a href="">Link</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- 11.  2. Copyright info -->
+        <div id="copyRight">
+            <p>
+                &copy; Copyright - Orlando Morales - <a href="mailto:orma@engineer.com">orma@engineer.com</a> 
+            </p>
+        </div>    
+    </footer>
+</body>
+</html>

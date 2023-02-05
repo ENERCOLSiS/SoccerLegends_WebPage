@@ -1,0 +1,305 @@
+<!-- Orlando Morales - 8852536 -->
+<!-- PROG 8045 Web Foundations Project 
+Date Created: 23/11/2022 
+Last Update: 27/11/2022 -->
+
+<!-- 1. page built as per the design provided -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Unique title defined in the head tag -->
+    <title>
+        A2 Orlando Morales 8852536 29/11/2022
+    </title>
+    <!-- Loading my webPage icon -->
+    <link rel="icon" href="images/logos/favicon1.png" type="image/x-icon">
+
+    <!-- Calling Normalize CSS-->
+    <link rel="stylesheet" href="css/normalize.css">
+    <!-- Importing my CSS file -->
+    <link rel="stylesheet" href="css/myStyle.css">
+
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Zen+Dots&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Luxurious+Roman&display=swap" rel="stylesheet">
+
+    <!-- fonts for form icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<!-- 2. body is sit in a container in css -->
+<body>
+    <!-- 3. Header Section -logo from css and tagline an h2-->
+    <!-- 4. header in different color from the rest of the site -->
+    <header id="mainheader">
+        <!-- this is my icon also work as a link to the home page-->
+        <div class="logo">
+            <a href="index.html"><img src="/images/logos/logo.png"" alt="Cracks Logo"></a>
+        </div>
+        <!-- This is my Tagline -->
+        <h2>Cracks - Orlando Morales - orma@engineer.com</h2>
+    </header>
+
+     <!-- 5. Two tier Navigation bar -->
+    <nav>
+        <!-- my first level nav menu -->
+        <ul>
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+            <li>
+                <a href="innerpage.html">Leyends</a>
+                <!-- my Second level UL or the sub menu for -->
+                <ul>
+                    <li><a href="innerpage.html#hero">Story</li></a>
+                    <li><a href="innerpage.html#firstSection">Video</li></a>
+                    <li><a href="innerpage.html#anotherSecondSection">Top 10</li></a>
+                </ul> 
+            </li>
+            <li>
+                <a href="innerpage.html#firstSection">Ultimate Video</a>
+            </li>
+            <li>
+                <a href="innerpage.html#thirdSection">Join Us</a>
+            </li>
+        </ul>
+    </nav>
+    
+    <main>
+        <div id="hero">
+            <img src="images/heroimage2.jpg" alt="Ball in the soccer pitch">
+            <!-- Image heroimage2.jpg from Wallpaper House (2022, November 30). soccer wallpapers [Wallpapaer]. From WallpaperHouse. https://wallpaper-house.com/data/out/5/wallpaper2you_61163.jpg -->
+            <div class="herotext">
+                <!-- This is the title of the page -->
+                <h1>*** Soccer Leyends ***</h1> 
+            </div>
+        </div>
+
+        <section id="firstSection">
+            <div class="textLeft">
+                <h2>Ultimate Team Galaxy 11</h2>
+                <p>This video tells the story of 13 top-class football players from around the world attempt to save the planet from alien domination in a “winner takes Earth” match on a virtual football pitch</p>
+                <p>The Galaxy 11 squad includes: Franz Beckenbauer (Germany; Manager), Lionel Messi (Argentina; Captain), Mario Gotze (Germany), Oscar dos Santos (Brazil), Wu Lei (China), Stephan El Shaarawy (Italy), Victor Moses (Nigeria), RadamelFalcao (Colombia), Lee Chung-Yong (South Korea), Iker Casillas (Spain), Wayne Rooney (England), Landon Donovan (United States), Aleksandr Kerzhakov (Russia) and Cristiano Ronaldo (Portugal)</p>
+                <p>Some of the current greatest players did not participate in this video. However, this video sparks your emotions. So why are you waiting for? Go and watch it!.</p>
+                <!-- Extrated from 4creativehds. (2022, November 28). Hui Jiang, Chu, Quiu, Naufal [blog]. From https://4creativehds.wordpress.com/samsung-galaxy-11-the-video-example-of-branding/ -->
+            </div>
+            <div class="videoRight">
+                <video src="media/Galaxy11.mp4"  poster="media/Galaxy11_poster.jpg" controls>
+                    <p>Sorry, your browser does not support video. You can view this from <a href="https://www.youtube.com/watch?v=43dvsy2S9sg">view</a></p>
+                </video>
+                <!-- Downloaded from youtube. (2022, November 28). ReNo9Prod [video]. From https://www.youtube.com/watch?v=43dvsy2S9sg -->
+            </div>
+        </section>
+
+        <section id="anotherSecondSection">
+            <header>
+                <h2> &starf; TOP 10 - BEST OF ALL TIMES &starf;</h2>
+            </header>
+            <table class="table">
+                <!-- Extrated from IFFHS. (2022, November 28). IFFHS [Oficial Web Site]. From https://www.iffhs.com/posts/1053 -->
+                <tr>
+                    <th>Rank</th>
+                    <th>Player</th>
+                    <th>Conuntry</th>
+                    <th>Points</th>
+                </tr>
+                <!-- 1 -->
+                <tr>
+                    <td class="rank">1</td>
+                    <td>Edson Arantes do Nascimento "PELE"</td>
+                    <td>Brazil</td>
+                    <td>1705</td>
+                </tr>
+                <!-- 2 -->
+                <tr>
+                    <td class="rank">2</td>
+                    <td>Hendryk Johannes CRUIJFF</td>
+                    <td>Netherlands</td>
+                    <td>1303</td>
+                </tr> 
+                <!-- 3 -->
+                <tr>
+                    <td class="rank">3</td>
+                    <td>Franz BECKENBAUER</td>
+                    <td>Germany</td>
+                    <td>1228</td>
+                </tr> 
+                <!-- 4 -->
+                <tr>
+                    <td class="rank">4</td>
+                    <td>Alfredo DI STEFANO</td>
+                    <td>Argentina/Spain</td>
+                    <td>1215</td>
+                </tr> 
+                <!-- 5 -->
+                <tr>
+                    <td class="rank">5</td>
+                    <td>Diego Armando MARADONA</td>
+                    <td>Argentina</td>
+                    <td>1214</td>
+                </tr> 
+                <!-- 6 -->
+                <tr>
+                    <td class="rank">6</td>
+                    <td>Ferenc PUSKAS</td>
+                    <td>Hungary</td>
+                    <td>810</td>
+                </tr> 
+                <!-- 7 -->
+                <tr>
+                    <td class="rank">7</td>
+                    <td>Michel PLATINI</td>
+                    <td>France</td>
+                    <td>722</td>
+                </tr> 
+                <!-- 8 -->
+                <tr>
+                    <td class="rank">8</td>
+                    <td>Manoel Dos Santos "GARRINCHA"</td>
+                    <td>Brazil</td>
+                    <td>624</td>
+                </tr> 
+                <!-- 9 -->
+                <tr>
+                    <td class="rank">9</td>
+                    <td>EUSEBIO Ferreira da Silva</td>
+                    <td>Portugal</td>
+                    <td>544</td>
+                </tr> 
+                <!-- 10 -->
+                <tr>
+                    <td class="rank">10</td>
+                    <td>Sir Robert CHARLTON</td>
+                    <td>England</td>
+                    <td>508</td>
+                </tr> 
+            </table>
+        </section>
+
+        <section id="thirdSection" class="test">
+            <h2> JOIN OUR CLUB AND GET FREEBIES </h2>
+            <fieldset>
+                <legend>Contact Information</legend>
+                <form action="" >
+                    <div class="joinus">
+                        <div class="data">
+                            <div class="field">
+                                <label for="name">Name: </label>
+                                <i class="fa fa-user icon"></i>
+                                <input type="text" name="name" id="name" required>
+                            </div>
+                            
+                            <div class="field">
+                                <label for="email">Email: </label>
+                                <i class="fa fa-envelope icon"></i>
+                                <input type="text" name="email" id="email" required>
+                            </div>
+                    
+                            <div class="field">
+                                <label for="address">Message: </label>
+                                <i class="fa fa-pencil icon"></i>
+                                <textarea name="address" id="address"></textarea>
+                            </div>
+                        </div>
+                
+                        <div class="survey">
+                            <div class="check">
+                                <p> What makes an outstanding soccer player? </p>
+                                <div>
+                                    <input type="checkbox" id="healthy" name="healthy" value="healthy">
+                                    <label for="healthy"> Eating healthy </label>
+                                </div>
+                                
+                                <div>
+                                    <input type="checkbox" id="score" name="score" value="score">
+                                    <label for="score"> Score Goals </label>
+                                </div>
+                                
+                                <div>
+                                    <input type="checkbox" id="talent" name="talent" value="talent">
+                                    <label for="talent"> Talent </label>
+                                </div>
+                                
+                                <div>
+                                    <input type="checkbox" id="discipline" name="discipline" value="discipline">
+                                    <label for="discipline"> Discipline </label>
+                                </div>
+                    
+                                <div>
+                                    <input type="checkbox" id="lucky" name="lucky" value="lucky">
+                                    <label for="lucky"> Lucky </label>
+                                </div>
+                            </div>
+                    
+                            <div class="radio">
+                                <p> Do you like this web page? </p>
+                                <div>
+                                    <input type="radio" name="like" id="yes" value="yes">
+                                    <label for="yes"> yes </label>
+                                </div>
+                                <div>
+                                    <input type="radio" name="like" id="no" value="no">
+                                    <label for="no"> no </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="buttons">
+                        <div class="submit">
+                            <div class="button">
+                                <button type="submit">Submit</button>
+                            </div>
+                        </div>
+                
+                        <div class="reset">
+                            <div class="button">
+                                <button type="submit">Clear Form</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </fieldset>
+        </section>        
+    </main>
+                
+    <!-- 11. Footer with two sections 1.Menus 2.Copyright info -->
+    <footer>
+        <!-- 11. 1. menus -->
+        <div class="menus">
+            <div id="menu1">
+                <h3>Menu1</h3>
+                <ul>
+                    <li><a href="">Link</a></li>
+                    <li><a href="">Link</a></li>
+                    <li><a href="">Link</a></li>
+                </ul>
+            </div>
+            <div id="menu2">
+                <h3>Menu2</h3>
+                <ul>
+                    <li><a href="">Link</a></li>
+                    <li><a href="">Link</a></li>
+                    <li><a href="">Link</a></li>
+                </ul>
+            </div>
+            <div id="menu3">
+                <h3>Menu3</h3>
+                <ul>
+                    <li><a href="">Link</a></li>
+                    <li><a href="">Link</a></li>
+                    <li><a href="">Link</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 11.  2. Copyright info -->
+        <div id="copyRight">
+            <p>
+                &copy; Copyright - Orlando Morales - <a href="mailto:orma@engineer.com">orma@engineer.com</a> 
+            </p>
+        </div>    
+    </footer>
+</body>
+</html>

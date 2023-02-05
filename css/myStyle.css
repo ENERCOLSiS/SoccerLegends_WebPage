@@ -1,0 +1,569 @@
+/* Orlando Morales - 8852536 */
+/*PROG 8045 Web Foundations Project 
+Date Created: 23/11/2022 
+Last Update: 27/11/2022 */
+
+* {
+    box-sizing: border-box; /* Applied to all elements for easy sizing of elements(width) ensures that all elements are sized equally at 100% */
+}
+
+html {
+    background: url("../images/backgrounds/stadium.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+body{ /*Acts as a container of the full content of the page*/
+    width: 1000px;
+    margin: 20px auto;  /* Sets 20px top margin and centers the page in the browser*/
+    border: 1px solid black;
+    box-shadow: 0 0 10px black;
+    font-family: Arial, Helvetica, sans-serif; /* font by defalut */
+    font-size: 14px; /* reference font size for the web pages*/
+}
+
+/* Style for the main header */
+#mainheader {
+    display: flex;
+    justify-content:space-around;
+    background-color: #214d99; /* sets a diferent color for the header */
+    padding: 10px 20px; /*gives space to the hearder container and elements*/
+}
+
+.logo img{
+    width: 120px; /* defines the widht of the logo and then the max height*/
+    height: 80px;
+    margin-left: -35px; /* force to move h2 as an inline block to the left */
+}
+
+#mainheader h2{
+    display: inline-block;
+    margin: auto 0; /*to vertically center the h2*/
+    color: white;
+    text-shadow: 2px 2px black, 5px 5px 5px black, 0 0 20px white;
+    font-family: 'Zen Dots', cursive; /*This is the font select for the nav links */
+    font-size: 1.5em;
+    /* padding-left: 50px; To distanciate from logo */
+    margin-left: -35px; /* force to move h2 as an inline block to the left */
+}
+
+/* CSS for the 1st level Nav */
+
+nav{
+    background-color: goldenrod; /* add colour to the nav background */
+    padding: 20px 0; /* add a 20 px top and bottom padding in the nav tag  */
+    text-align: center; /* make the text in the nav centered */
+}
+
+nav a{
+    font-size: 1.2em; /* make the text bigger than default */
+    font-weight: bold; /* make the text bold */
+    color: black;
+    font-family: 'Zen Dots', cursive; /* This is the font select for the nav links*/
+    text-decoration: none; /* remove the underline */
+    padding: 0 30px; /* push the links away from the other links */
+}
+
+nav ul{ /* applies these styles to all the child <ul> tags in <nav> */
+    list-style-type: none; /* remove the dots from the list */
+    padding: 0;
+    margin: 0 auto;
+}
+
+nav > ul >li{ /* Only applies these styles to the immediate child <li> in the immediate child <ul> in <nav>. Basically it only affects the <li> in the main menu not the sub menu */
+    display: inline-block; /* to make the links in the main menu site side by side */
+    position: relative; /* to make the parent <li> as the container element of the absolutely positioned <ul> representing the sub menu */
+}
+
+nav ul li a {
+        display: block; /* all links to appears like boxes*/
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 5px; /*give some space among characters*/
+        font-size: 1em;
+        color: black;
+        text-align: center;
+        padding: 10px 25px; /* rectangular shape padding */
+        transition: background .5s, box-shadow .25s;
+        text-shadow: 2px 2px black, 0 0 5px white, 0 0 30px white;
+}
+
+nav a:hover {
+    color: white;
+    background:#214d99;
+    box-shadow: 0px 4px 0px 0px gold; /*gives an effect of depth underline gold*/
+}
+
+
+/* ---- Sub Nav menu  --- */
+
+nav ul li ul { /* applies styles only to the sub menu */
+	width: 200px;
+	position: absolute; /* put the sub menu in a separate layer */
+	z-index: 999; /* make sure the sub menu is not hidden behind other elements */
+	text-align: left;
+	background-color: #10316b;
+    box-shadow: 0 0 5px white;
+}
+
+nav ul li ul li a{ /* styles for the <a> in the sub menu */
+    color: white;
+    padding: 10px;
+    display: block; /* to make sure the anchor tags occupy all the space available otherwise the hover colour changes do not have a good user experience. */
+}
+
+nav ul li ul li:hover a:hover{ /* styles for the <a> in the sub menu on mouse over */
+    color: goldenrod;
+    background-color: black;
+}
+
+nav ul li ul { /* applies styles only to the sub menu */
+    display: none; /* hide the sub menu by default */
+}
+
+nav ul li:hover ul{/* applies styles only to the sub menu whose parent <li> is hovered */
+    display: block; /* show the sub menu when a user brings their mouse over the parent <li> */
+}
+
+
+main{
+    border: 1px solid black;
+    display: grid;
+    /* grid-gap: 20px; */
+    grid-template-areas: 
+        "box1 box1 box1" /*Hero Section*/
+        "box2 box2 box2" /*Hero Heading*/
+        "box3 box3 box3" /*First Section img and text*/
+        "box4 box4 box4" /*Second Section text and img*/
+        "box5 box5 box5" /*Third Section*/
+    ;
+}
+
+.heroSection{
+    grid-area: box1;
+}
+
+.heroSection img{
+    margin: auto;
+    width: 100%;
+    height: 100%;  /*to cover small gap of section container*/
+}
+
+/* Style for the secundary header */
+.heroHeading{
+    grid-area: box2;
+    background-color: #393737;
+    text-align: center;
+    color: white;
+}
+
+.heroHeading h2, #anotherSecondSection h2{
+    font-weight: bolder;
+    text-transform: uppercase;
+    text-shadow: 2px 2px black, 0 0 5px black, 0 0 30px white;
+    animation:blinking 1s infinite;
+    font-size: 1.5em;
+    }
+    @keyframes blinking{
+    0%{   color: goldenrod;   }
+    25%{   color: white; }
+    50%{   color: transparent; }
+    75%{   color: goldenrod;   }
+    100%{   color:transparent; }
+}
+
+.heroHeading p{
+    font-size: 1.2em;
+    padding: 0 30px;
+}
+
+#firstSection{
+    display: grid;
+    grid-area: box3;
+    grid-template-columns: 1.5fr 1.5fr;
+    padding: 15px 0;
+    background-color: white;
+    color: black; 
+}
+
+#secondSection{
+    display: grid;
+    grid-area: box4;
+    grid-gap: 0 15px;
+    grid-template-columns: 1.5fr 1.5fr; /* takes one row and a half of the 3 grid columns */
+    padding: 15px 0;
+    background-color: white;
+    color: black;
+}
+
+.textLeft{
+    margin: 30px auto; /*to center the text giving 30px space from previos seccion*/
+    width: 420px; /* same size as the image*/
+    text-align: justify;
+}
+
+.textRight{
+    margin: 0px auto ; /*to center the text and align text top with the iage*/
+    width: 420px; /* same size as the image*/
+    text-align: justify;
+}
+
+#thirdSection {
+    display: grid;
+    grid-area: box5;
+    margin: auto; /* Center my players cards*/
+    padding-bottom: 30px;
+    font-size: 0.9em;
+    width: 100%;
+}
+
+.cards{
+    display: grid;
+    grid-gap: 20px;
+    grid-template-areas: 
+        "player1 player2 player3" /* Players */
+    ;
+    width: 100%;
+    padding: 0 10px; /*Shink cards a bit to align with upper content*/
+}
+
+.player1{
+    grid-area: player1;
+    margin: auto; /* to center the card inside the grid area*/
+}
+
+.player2{
+    grid-area: player2;
+    margin: auto;
+}
+
+.player3{
+    grid-area: player3;
+    margin: auto;
+}
+
+#secondSection .imgLeft{
+    margin: 0 auto 30px;
+}
+
+#firstSection .imgRight{
+    margin: 30px auto 0; /* to center the image and leaves 30px */
+}
+
+#firstSection img, #secondSection img, #firstSection video{
+    width: 430px; 
+}
+
+/*css for the video*/
+#firstSection .videoRight{
+    margin: auto;
+}
+
+
+/*To aling subhedings with images of each section*/
+#firstSection h2, #secondSection h2{
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: left;
+}
+
+.imgLeft{
+    clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%); /* Clip the figure at different angles to remove boxy-ness */
+}
+.imgRight{
+	clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+}
+
+/* Cards Section Style*/
+#thirdSection h2{
+    text-align: center;
+    text-shadow: 2px 2px goldenrod, 5px 5px 5px black, 0 0 20px yellow;
+    font-size: 1.6em;
+    font-family: 'Zen Dots', cursive;
+}
+
+.player{
+    display: flex;
+    flex-flow: column;
+    background-color: rgba(0,0,0,0.7);
+    border:  2px solid goldenrod;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 5px white;
+    color: white;
+    max-width: 280px;
+    font-size: 1em;
+}
+
+.player img{
+    height: 300px;
+}
+
+.player h3{
+    margin: 20px 0 0 0;
+}
+
+/* anchor tags of cards designed as buttons*/
+.player .button {  
+    margin-top: auto; 
+    background-color: goldenrod;
+    color: black;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    font-family: sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    width: 100px;
+}
+
+.menus{
+    display: grid;
+    grid-gap: 20px;
+    grid-template-areas: 
+        "menu1 menu2 menu3" /*menus*/
+    ;
+}
+
+#menu1{
+    grid-area: "menu1";
+    margin: auto;
+}
+
+#menu2{
+    grid-area: "menu2";
+    margin: auto;
+}
+
+#menu3{
+    grid-area: "menu3";
+    margin: auto;
+}
+
+footer{
+    border: 1px solid black;
+    background-color:goldenrod;
+    color: black;
+}
+
+footer h3{
+    text-align: center;
+    color: black;
+    font-family: 'Zen Dots', cursive; /* This is the font select for the header*/
+}
+
+footer p{
+    text-align: center;
+    font-family: 'Zen Dots', cursive; /* This is the font select for the header*/
+}
+
+footer ul{
+    margin-left: -30%;
+    text-align: left;
+    list-style: none;
+    list-style-type: none; /*to remove the dots in all list*/
+}
+
+footer a {
+    text-decoration: none;
+    color: black;
+}
+
+#copyRight{
+    border-top: 1px solid black;
+}
+
+#copyRight a{
+    color: #10316b;
+    font-weight: 800;
+}
+
+/* CSS for InnerPage */
+
+#hero{
+    position: relative; /* to make this div the relative ancestor of .herotext */
+    text-align: center; /* to center all the content in .hero */
+    grid-area: box2;
+}
+
+#hero img{
+    width: 100%;
+    height: 400px;
+}
+
+.herotext{
+    position: absolute; /* make .herotext content sit in a separate layer over the image */
+    top: 40px; /* make the .herotext cover the entire area of .hero from top */
+    bottom: 0; /* to bottom */
+    left: 0; /* and left */
+    right: 0; /* right, so that the entire image is overlayed */
+    /* background-color: rgba(121, 113, 10, 0.267); add a semi transparent background */
+    padding: 20px; /* add some padding */
+    /* color: #fbeeef; change the text colour */
+    font-weight: bold; /* make the text bold */
+    color: goldenrod; /* change the colour of the text links */
+    text-shadow: 3px 3px black, 5px 5px 5px black, 0px 0px 20px white;
+}
+
+#anotherSecondSection{
+    grid-area: box4;
+    background-color: #393737;
+    color:white;
+    padding: 0 30px 30px;
+    width: 100%;
+    margin-top: 0;
+}
+
+#anotherSecondSection h2{
+    text-align: center;
+}
+
+.table{
+   margin: 0 auto; 
+   border: 2px solid #10316b;
+   border-collapse: collapse;
+   border-spacing: 0;
+   width: 100%;
+   box-shadow: 4px 4px 10px goldenrod;
+}
+
+table td, th{
+    padding: 10px;
+    border: 2px solid #10316b;
+}
+
+th{
+    background-color: goldenrod;
+    color: black;
+}
+
+tr:nth-child(even){
+    background-color: lightgrey;
+    color: black;
+}
+
+.rank{
+    text-align: center; /* to aling rank number to the center */
+}
+
+/* Style for the form seccion */
+
+.joinus {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    color: white;
+    margin: 50px auto 0px; /* more space on top for the fieldset label*/
+}
+
+.buttons{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 10px;
+}
+
+.survey{
+    margin: auto;
+}
+
+.survey p{
+    font-size: 1rem;
+    font-weight: 800;
+    color: goldenrod;
+    margin-top: 0; /* to align the 1st question with the field on the left*/
+}
+
+.survey .check{
+    margin-bottom: 10px; /*give some space from the 1st question*/
+}
+
+fieldset{
+    position: relative;
+    border: 2px solid #10316b;
+    border-radius: 5px;
+    background-color: #393737;
+    box-shadow: 4px 4px 10px goldenrod;
+    width: 935px; /* fixed width to aline with the upper content*/
+    margin: auto;
+    font-size: 1.11em;
+}
+
+fieldset legend{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 0 10px;
+    color: goldenrod;
+} 
+
+.submit button{
+    display: inline-block;
+    border: 2px solid #10316b;
+    background-color: goldenrod;
+    color: black;
+    font-weight: bold;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.submit button:hover, .reset button:hover {
+    background-color: gold;
+  }
+
+.reset button{
+    display: inline-block;
+    border: 2px solid #10316b;
+    background-color: goldenrod;
+    color: black;
+    font-weight: bold;
+    padding: 5px 10px;
+}
+
+.field{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    padding: 10px 20px;
+}
+
+.field label{
+    font-weight: 700;
+    font-size: 1rem;
+    color: goldenrod;
+    display: inline-block;
+    width: 80px;
+    vertical-align: top;
+}
+
+.icon {
+    padding: 10px;
+    background: #10316b;
+    color: white;
+    min-width: 50px;
+    text-align: center;
+  }
+
+.field input{
+    display: block;
+    width: 300px;
+}
+
+ .field textarea:focus, input:focus{
+    outline: none; /* eliminates default focus border*/
+    border: 2px solid #10316b; /* stablishes the border when focus */
+    box-shadow: 1px 1px 4px goldenrod; /* shadow efect for the current input */
+}
+
+.field textarea{
+    width: 300px; /*same width as the field inputs*/
+    height: 100px;
+}
+
+.field select{
+    width: 208px;
+}
